@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explorador de Projetos GitHub</title>
-    <!-- Inclui os ícones do Tabler Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <!-- Vinculação do ficheiro CSS externo -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <h2 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Explorador de projetos GitHub de fabianaroliveira</h2>
 
-<div style="padding:1rem">
+<div style="padding:1rem; position:relative; z-index:1;">
     <div class="shell">
         <div class="sidebar">
             <div class="sid-top">
@@ -21,13 +19,13 @@
                     <div class="sid-avatar">FA</div>
                     <div>
                         <div class="sid-name">fabianaroliveira</div>
-                        <div class="sid-sub">GitHub</div>
+                        <div class="sid-sub">// GitHub Portfolio</div>
                     </div>
                 </div>
             </div>
             <div class="repo-list">
                 <div class="repo-section">
-                    <div class="repo-section-header">Links de projetos</div>
+                    <div class="repo-section-header">[ Projetos ]</div>
                     <div id="project-links"></div>
                 </div>
             </div>
@@ -35,8 +33,9 @@
 
         <div class="detail">
             <div class="empty">
-                <i class="ti ti-world" aria-hidden="true" style="font-size:42px;color:var(--border-color)"></i>
-                <span>Clique num projeto para abrir o repositório no GitHub</span>
+                <i class="ti ti-terminal-2" aria-hidden="true" style="font-size:48px;"></i>
+                <span>Selecciona um projecto</span>
+                <span style="font-size:9px; color:var(--text-tertiary); letter-spacing:0.2em;">// clica para abrir no GitHub</span>
             </div>
         </div>
     </div>
@@ -72,4 +71,3 @@ renderProjectLinks();
 </script>
 </body>
 </html>
-
