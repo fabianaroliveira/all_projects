@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorador de Projetos GitHub</title>
+    <!-- Inclui os ícones do Tabler Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <!-- Vinculação do ficheiro CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Explorador de projetos GitHub de fabianaroliveira</h2>
+
+<div style="padding:1rem">
+    <div class="shell">
+        <div class="sidebar">
+            <div class="sid-top">
+                <div class="sid-brand">
+                    <div class="sid-avatar">FA</div>
+                    <div>
+                        <div class="sid-name">fabianaroliveira</div>
+                        <div class="sid-sub">GitHub</div>
+                    </div>
+                </div>
+            </div>
+            <div class="repo-list">
+                <div class="repo-section">
+                    <div class="repo-section-header">Links de projetos</div>
+                    <div id="project-links"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail">
+            <div class="empty">
+                <i class="ti ti-world" aria-hidden="true" style="font-size:42px;color:var(--border-color)"></i>
+                <span>Clique num projeto para abrir o repositório no GitHub</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const PROJECTS = [
+    { title: "IAapi", repo: "https://github.com/fabianaroliveira/IAapi", demo: "https://github.com/fabianaroliveira/IAapi" },
+    { title: "filmeAPI", repo: "https://github.com/fabianaroliveira/filmeAPI", demo: "https://fabianaroliveira.github.io/filmeAPI/" },
+    { title: "apis", repo: "https://github.com/fabianaroliveira/apis", demo: "https://fabianaroliveira.github.io/apis/" },
+    { title: "APIWeather", repo: "https://github.com/fabianaroliveira/APIWeather", demo: "https://fabianaroliveira.github.io/APIWeather/" },
+    { title: "realidadeVirtualAmbientes", repo: "https://github.com/fabianaroliveira/realidadeVirtualAmbientes", demo: "https://fabianaroliveira.github.io/realidadeVirtualAmbientes/" },
+    { title: "youtubeAPI", repo: "https://github.com/fabianaroliveira/youtubeAPI", demo: "https://fabianaroliveira.github.io/youtubeAPI/" },
+    { title: "Creative Coding com p5.js - Projeto 1", repo: "https://github.com/fabianaroliveira/Projeto-1-Creative-Coding-with-p5.js", demo: "https://fabianaroliveira.github.io/Projeto-1-Creative-Coding-with-p5.js/" },
+    { title: "MisWebPages", repo: "https://github.com/fabianaroliveira/MisWebPages", demo: "https://fabianaroliveira.github.io/MisWebPages/" },
+    { title: "RepositorioClase2", repo: "https://github.com/fabianaroliveira/RepositorioClase2", demo: "https://fabianaroliveira.github.io/RepositorioClase2/" },
+    { title: "RepositorioClase1", repo: "https://github.com/fabianaroliveira/RepositorioClase1", demo: "https://fabianaroliveira.github.io/RepositorioClase1/" },
+    { title: "realidadeVirtual", repo: "https://github.com/fabianaroliveira/realidadeVirtual", demo: "https://fabianaroliveira.github.io/realidadeVirtual/" },
+    { title: "Dashboards - Projeto 3", repo: "https://github.com/fabianaroliveira/Dashboards", demo: "https://fabianaroliveira.github.io/dashboards/" }
+];
+
+function renderProjectLinks() {
+    const container = document.getElementById('project-links');
+    container.innerHTML = PROJECTS.map(project => `
+        <div class="repo-item">
+            <a class="repo-item-name" href="${project.repo}" target="_blank" rel="noopener noreferrer">${project.title}</a>
+            ${project.demo ? `<a class="repo-demo-link" href="${project.demo}" target="_blank" rel="noopener noreferrer">Demo</a>` : ''}
+        </div>
+    `).join('');
+}
+
+renderProjectLinks();
+</script>
+</body>
+</html>
+
